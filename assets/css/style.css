@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'DB Ozone x';
+    src: url('../fonts/DB\ Ozone\ X\ v3.2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DB Ozone x', sans-serif;
+}
+body {
+    background-image: url('../img/isuzu_bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+div.card-box-isuzu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    padding: 10px;
+    /* border: 1px solid #ccc; */
+}
+
+.swiper-scrollbar {
+    background: rgba(0, 0, 0, 0.1);
+    height: 6px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .swiper-scrollbar-drag {
+    background: #888;
+  }
+  

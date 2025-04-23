@@ -1,0 +1,171 @@
+@font-face {
+    font-family: 'DB Ozone x';
+    src: url('assets/fonts/DB\ Ozone\ X\ Li\ v3.2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+
+
+
+
+
+.hamburger {
+    font-size: 20px;
+}
+
+
+.logo {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    font-family: 'DB Ozone x', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: regular;
+    margin-right: 50px;
+}
+
+.menu a:last-child {
+    margin-right: 0;
+    /* ตัวสุดท้ายไม่ต้องมีช่องว่างขวา */
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -500px;
+    /* ซ่อนอยู่ขวา */
+    width: 500px;
+    height: 100%;
+    background-color: #ffffff;
+    /* padding: 20px; */
+    transition: right 0.3s ease;
+    z-index: 999;
+    border-radius: 80px 0 0 80px;
+
+    font-family: 'DB Ozone x', sans-serif;
+    font-size: 50px;
+
+}
+
+.isuzu_menu_footer{
+    border-radius: 0 0 0 80px;
+    
+}
+
+.sidebar h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.sidebar-content a {
+    padding-left: 50px;
+    font-size: 30px;
+    color: #000000 !important;
+}
+
+.sidebar-footer{
+    padding: 0px;
+    margin-top: auto;
+}
+
+.spacer-footer{
+    margin-top: 320px;
+}
+  
+  
+
+.sidebar.active {
+    right: 0;
+}
+
+/* Backdrop ดำๆ */
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+.backdrop.active {
+    display: block;
+}
+
+/* ลิงก์ใน sidebar */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #444;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

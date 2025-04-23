@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  
+  /* swiper  */
+  .swiper {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #ddd; */
+  }
+
+
+  .slide-card {
+    border-radius: 20px;
+    cursor: grab;
+    height: 650px;
+    width: 350px !important;
+    /* padding-left: 85px; */
+    border: 1px solid #ddd;
+  }
+
+  .swiper-wrapper{
+  }
+  
+  .slide-card .slide-card-img-top {
+    max-width: 100px;
+    border-radius: 50%;
+    margin: 15px auto 0;
+    box-shadow: 0 8px 20px -4px #8a86e8;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid #ddd; */
+
+  }
+  
+  .slide-card h5 {
+    color: #3345c6;
+    font-size: 21px;
+    /* border: 1px solid #ddd; */
+
+    /* margin: 15px 0; */
+  }
+  
+  .slide-card h5 span {
+    font-size: 18px;
+    color: #111;
+  }
+  
+  .slide-card p {
+    font-size: 18px;
+    color: #000;
+    padding-bottom: 15px;
+  }
+  
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    font-size: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    transition: transform 0.3s;
+    transform-origin: bottom center;
+    /* border: 1px solid #ffffff; */
+  }
+  .swiper-slide-active {
+    transform: scale(1.05);
+    z-index: 5;
+  }
+
+  .video-margin-left{
+    margin-left: 100px;
+  }
+
+  .video-margin-right{
+    margin-right: 100px;
+  }
+
+  .text-center{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .progress-slider {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 20px;
+    background: #666;
+    border-radius: 50px;
+    outline: none;
+  }
+
+  /* Track (background bar) */
+  .progress-slider::-webkit-slider-runnable-track {
+    height: 20px;
+    background: #666;
+    border-radius: 50px;
+  }
+
+  .progress-slider::-moz-range-track {
+    height: 20px;
+    background: #666;
+    border-radius: 50px;
+  }
+
+  /* Thumb (circle thing you drag) */
+  .progress-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0px; /* align thumb vertically */
+  }
+
+  .progress-slider::-moz-range-thumb {
+    width: 60px;
+    height: 20px;
+    background: #ddd;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }

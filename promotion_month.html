@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>โปรโมชั่นประจำเดือน </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link cdn list  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    
+    <!-- link style sheet -->
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/promotion_month.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="assets/img/isuzu_logo.png" width="250px" alt="">
+        </div>
+        <div class="navbar-center">
+            <h1>โปรโมชั่นประจำเดือน</h1>
+        </div>
+        <div class="navbar-right">
+            <div class="menu" id="menu">
+              <a href="#" id="sidebarToggle" class="menu-btn">
+                <i class="fa-solid fa-bars" style="font-size: 30px;"></i>
+              </a>   
+            </div>
+        </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="promotion-month-box-card">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 1"></div>
+            <div class="swiper-slide"><img src="assets/img/pro2.jpg" alt="โปร 2"></div>
+            <div class="swiper-slide"><img src="assets/img/pro3.jpg" alt="โปร 3"></div>
+            <div class="swiper-slide"><img src="assets/img/pro4.jpg" alt="โปร 4"></div>
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 5"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 1"></div>
+            <div class="swiper-slide"><img src="assets/img/pro2.jpg" alt="โปร 2"></div>
+            <div class="swiper-slide"><img src="assets/img/pro3.jpg" alt="โปร 3"></div>
+            <div class="swiper-slide"><img src="assets/img/pro4.jpg" alt="โปร 4"></div>
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 5"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 1"></div>
+            <div class="swiper-slide"><img src="assets/img/pro2.jpg" alt="โปร 2"></div>
+            <div class="swiper-slide"><img src="assets/img/pro3.jpg" alt="โปร 3"></div>
+            <div class="swiper-slide"><img src="assets/img/pro4.jpg" alt="โปร 4"></div>
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 5"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 1"></div>
+            <div class="swiper-slide"><img src="assets/img/pro2.jpg" alt="โปร 2"></div>
+            <div class="swiper-slide"><img src="assets/img/pro3.jpg" alt="โปร 3"></div>
+            <div class="swiper-slide"><img src="assets/img/pro4.jpg" alt="โปร 4"></div>
+            <div class="swiper-slide"><img src="assets/img/pro1.jpg" alt="โปร 5"></div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+
+    </div>
+  </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+<script>
+  const swipers = document.querySelectorAll('.mySwiper');
+
+  swipers.forEach((el) => {
+    new Swiper(el, {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      scrollbar: {
+        el: el.querySelector('.swiper-scrollbar'),
+        draggable: true, // ให้เลื่อน scrollbar ได้
+      },
+      mousewheel: true, // ให้ scroll ได้ด้วย mouse
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      },
+    });
+  });
+</script>
+
+
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: false, // ปิด loop ถ้าไม่ต้องการให้วน
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  const backdrop = document.getElementById('backdrop');
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault(); // ป้องกันไม่ให้ a รีเฟรชหน้า
+    sidebar.classList.toggle('active');
+    backdrop.classList.toggle('active');
+  });
+
+  backdrop.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    backdrop.classList.remove('active');
+  });
+</script>
+
+
+
+
+</body>
+</html>

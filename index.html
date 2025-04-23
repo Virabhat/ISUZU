@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ISUZU </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- link cdn list  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- link style sheet -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <link rel="stylesheet" href="/assets/css/card.css">
+    <link rel="stylesheet" href="/assets/css/video.css">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../assets/img/isuzu_logo.png" width="250px" alt="">
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <div class="menu" id="menu">
+        <a href="#">รีวิว</a>
+        <a href="#">รุ่นรถ</a>
+        <a href="#">ผลงาน</a>
+        <a href="#" id="sidebarToggle" class="menu-btn">
+          <i class="fa-solid fa-bars" style="font-size: 30px;"></i>
+        </a>        
+      </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-content">
+        <h2>MENU</h2>
+        <a href="/promotion_month.html">โปรโมชั่นประจำเดือน</a>
+        <a href="/promotion_accessories.html">โปรโมชั่นชุดเเต่ง</a>
+        <a href="#">รุ่นรถ</a>
+        <a href="#">ติดต่อเรา</a>
+
+        <div class="spacer-footer"></div>
+        <div class="sidebar-footer">
+          <img class="isuzu_menu_footer" src="assets/img/isuzu_menu_footer.webp" width="100%" alt="">
+        </div>
+      </div>
+    </div>
+    
+    <!-- Backdrop -->
+    <div class="backdrop" id="backdrop"></div>
+
+    
+
+
+  </header>
+
+  <section>
+  
+    <div class="card-box-isuzu">
+      <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video controls>
+                <source src="/assets/video/isuzu_video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video  controls>
+                <source src="/assets/video/isuzu_video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video controls>
+                <source src="/assets/video/isuzu_video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+
+
+<script>
+  const toggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebar');
+  const backdrop = document.getElementById('backdrop');
+
+  toggle.addEventListener('click', function(e) {
+    e.preventDefault(); // ป้องกันไม่ให้ a รีเฟรชหน้า
+    sidebar.classList.toggle('active');
+    backdrop.classList.toggle('active');
+  });
+
+  backdrop.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+    backdrop.classList.remove('active');
+  });
+</script>
+
+
+<script>
+  const swiper = new Swiper(".swiper", {
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    // Default parameters
+    slidesPerView: 1,
+    loop: true,
+    centeredSlides: true,
+    spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
