@@ -35,7 +35,92 @@ div.card-box-isuzu{
     margin-top: 10px;
   }
   
-  .swiper-scrollbar-drag {
+.swiper-scrollbar-drag {
     background: #888;
+  }
+
+div.mobile-section{
+    display: none;
+}
+
+div.card-box-type-isuzu-mobile{
+    display: none;
+}
+
+  @media (min-width: 320px) and (max-width: 480px) {
+
+    div.mobile-section{
+        display: block !important;
+    }
+
+    nav.navbar {
+        display: none !important;
+    }
+
+    div.sidebar{
+        display: none !important;
+    }
+
+    div.backdrop{
+        display: none !important;
+    }
+
+    div.card-box-isuzu{
+        display: none !important;
+    }
+
+    
+
+    body {
+        background-image: url('../img/bg-mobile.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+
+    div.logo-mobile{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img.logo-mobile-img{
+        width: 100px;
+    }
+
+    div.menu-mobile{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a.menu-text{
+        color: #fff;
+        font-size: 15px;
+        text-decoration: none;
+        margin: 0 20px;
+    }
+
+    div.card-box-isuzu-mobile{
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 93vh;
+        padding: 0px;
+    }
+
+
+    
+    .sample-slider{
+        width:70%;
+    }
+    .sample-slider img{
+        width: 100%;
+    }
+    
+
+    
   }
   

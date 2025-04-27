@@ -1,0 +1,25 @@
+.box-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+    }
+    
+    .card img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+    .card p {
+      margin: 0;
+      padding: 0 10px;
+      font-size: 16px;
+    }

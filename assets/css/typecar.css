@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'DB Ozone x';
+    src: url('../fonts/DB\ Ozone\ X\ v3.2.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DB Ozone x', sans-serif;
+}
+body {
+    background-image: url('../img/bg_typeCar.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+}
+
+.card-box-isuzu{
+    /* border: 1px solid #ccc; */
+}
+
+div.card-box-isuzu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55vh !important;
+  padding: 10px;
+}
+
+.img-size{
+    width: 400px;
+    border-radius: 30px;
+}
+
+.swiper-slide{
+  /* border: 1px solid #ccc; */
+}
+
+.box-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-detail-car{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  width: 350px;
+  height: 55px;
+  background-color: #333; /* สีเทาเข้ม */
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 40px;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.arrow-down {
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
